@@ -1,0 +1,17 @@
+<%-include("partial/header.ejs")-%>
+<h1>home</h1>
+<P><%=newblog%></P>
+<!-- <% for(var i=0;i<newarr.length;i++){ %>
+    
+    
+    <%}%> -->
+    <% newarr.forEach(function(post){%>
+        
+        <h1><%=post.title%></h1>
+        <p><%=post.body.substring(0,100) + "..."%></p>
+        
+        <a href="/posts/<%=post.title%>">read more</a>  
+        
+
+<%})%>
+<%-include("partial/footer.ejs")-%>
